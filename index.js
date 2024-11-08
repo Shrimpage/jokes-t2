@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
   res.send('This is custom text added by someone... Try /random_joke, /random_ten, /jokes/random, or /jokes/ten , /jokes/random/any-number');
 });
 
+app.get('/jokes/count', (req, res) => {
+  res.json({"jokes:count"});
+});
+
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
